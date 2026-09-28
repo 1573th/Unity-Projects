@@ -5,7 +5,11 @@ public class KeyPickup : MonoBehaviour
     public GameObject pathToAppear;
     void OnTriggerEnter(Collider other)
     {
-        pathToAppear.SetActive(true);
+        try
+        {
+            pathToAppear.SetActive(true);
+            
+        }  catch { }
         Destroy(gameObject);
     }
 
